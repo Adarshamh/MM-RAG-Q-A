@@ -83,7 +83,7 @@ with tab_chat:
                         f"{BACKEND_URL}/chat-stream",
                         json={"question": question},
                         stream=True,
-                        timeout=300,
+                        timeout=800,
                     ) as r:
                         if not r.ok:
                             st.error(f"Backend returned {r.status_code}: {r.text}")
